@@ -78,7 +78,7 @@ body {
 }
 
 #apad .apadLabel {
-  font-family: 'emerald';
+  font-family: 'emerald', 'galmuri9';
   font-size: var(--controls-size);
   text-shadow: var(--color-dark) var(--text-shadow-size) var(--text-shadow-size);
   color: var(--color-light);

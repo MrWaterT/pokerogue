@@ -67,7 +67,7 @@ function getTextStyleOptions(style: TextStyle, uiTheme: UiTheme, extraStyleOptio
   let shadowSize = 6;
 
   let styleOptions: Phaser.Types.GameObjects.Text.TextStyle = {
-    fontFamily: 'emerald',
+    fontFamily: 'emerald, galmuri9',
     fontSize: '96px',
     color: getTextColor(style, false, uiTheme),
     padding: {
@@ -99,7 +99,7 @@ function getTextStyleOptions(style: TextStyle, uiTheme: UiTheme, extraStyleOptio
       break;
     case TextStyle.PARTY:
     case TextStyle.PARTY_RED:
-      styleOptions.fontFamily = 'pkmnems';
+      styleOptions.fontFamily = 'pkmnems, galmuri7';
       styleOptions.fontSize = '66px';
       break;
     case TextStyle.TOOLTIP_CONTENT:
