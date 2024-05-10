@@ -14,6 +14,7 @@ export interface DailyRunConfig {
 
 export function fetchDailyRunSeed(): Promise<string> {
   return new Promise<string>(resolve => {
+    /*
     Utils.apiFetch('daily/seed').then(response => {
       if (!response.ok) {
         resolve(null);
@@ -21,6 +22,8 @@ export function fetchDailyRunSeed(): Promise<string> {
       }
       return response.text();
     }).then(seed => resolve(seed));
+    */
+    resolve(new URL(window.location.toString()).searchParams.get("seed").replace(/ /g,"+") as string);
   });
 }
 

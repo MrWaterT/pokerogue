@@ -80,11 +80,15 @@ export default class TitleUiHandler extends OptionSelectUiHandler {
 
       const ui = this.getUi();
 
-      this.dailyRunScoreboard.update();
+      this.dailyRunScoreboard.loadingLabel.setText("데일리런은\npokerogue.watert.stream?seed=시드\n로 접속해서 실행해주세요.\n\n시드는 pokerogue.net에서\n개발자도구를 켜서 직접 구하셔야...");
+      this.dailyRunScoreboard.loadingLabel.setFontSize("48px");
+      this.dailyRunScoreboard.loadingLabel.setVisible(true);
 
-      this.updateTitleStats();
+      // this.dailyRunScoreboard.update();
 
-      this.titleStatsTimer = setInterval(() => this.updateTitleStats(), 60000);
+      // this.updateTitleStats();
+
+      // this.titleStatsTimer = setInterval(() => this.updateTitleStats(), 60000);
 
       this.scene.tweens.add({
         targets: [ this.titleContainer, ui.getMessageHandler().bg ],
