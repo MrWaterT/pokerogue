@@ -269,7 +269,7 @@ export class EggHatchPhase extends Phase {
 
         this.scene.playSoundWithoutBgm('evolution_fanfare');
         
-        this.scene.ui.showText(`${this.pokemon.name} hatched from the egg!`, null, () => {
+        this.scene.ui.showText(`알이 부화해서\n${this.pokemon.name}(이)가 태어났다!`, null, () => {
           this.scene.gameData.updateSpeciesDexIvs(this.pokemon.species.speciesId, this.pokemon.ivs);
           this.scene.gameData.setPokemonCaught(this.pokemon, true, true).then(() => {
             this.scene.gameData.setEggMoveUnlocked(this.pokemon.species, this.eggMoveIndex).then(() => {
