@@ -103,6 +103,31 @@ export class DailyRunScoreboard extends Phaser.GameObjects.Container {
 
     this.page = 1;
     this.category = ScoreboardCategory.DAILY;
+
+    // 공지사항으로 사용하기
+    this.prevCategoryButton.setVisible(false);
+    this.nextCategoryButton.setVisible(false);
+    this.prevPageButton.setVisible(false);
+    this.pageNumberLabel.setVisible(false);
+    this.nextPageButton.setVisible(false);
+
+    this.titleLabel
+      .setText("최신화 당일 시드로 접속하기")
+      .setInteractive()
+      .on('pointerover', function () { this.setStyle({ color:"blue" }); }, this.titleLabel)
+      .on('pointerout', function () { this.setStyle({ color:"white" }); }, this.titleLabel)
+      .on('pointerdown', function () {
+        top.location.href = "https://pokerogue.watert.stream?seed=" +
+          "dAogdlTZTw6WnA7ZHRbXhw==";
+      });
+    this.loadingLabel
+      .setText(
+        "24.05.17 11:29 기준 최신화 완료\n(PR#737: 로캘파일 100% 한국어화)\n(트레이너 이름, 날씨 텍스트 등)\n\n" +
+        "데일리런은\npokerogue.watert.stream?seed=시드\n로 접속해서 실행해주세요.\n\n" +
+        "시드는 pokerogue.net에서\n개발자도구를 켜서 직접 구하셔야 합니다\n(데일리런 시작 후 seed 요청 Response)"
+      )
+      .setFontSize("48px")
+      .setVisible(true);
   }
 
   updateRankings(rankings: RankingEntry[]) {

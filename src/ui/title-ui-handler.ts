@@ -80,10 +80,15 @@ export default class TitleUiHandler extends OptionSelectUiHandler {
 
       const ui = this.getUi();
 
-      this.dailyRunScoreboard.loadingLabel.setText("데일리런은\npokerogue.watert.stream?seed=시드\n로 접속해서 실행해주세요.\n\n시드는 pokerogue.net에서\n개발자도구를 켜서 직접 구하셔야...");
-      this.dailyRunScoreboard.loadingLabel.setFontSize("48px");
-      this.dailyRunScoreboard.loadingLabel.setVisible(true);
-
+      // 메인 화면 업데이트 비활성화 및 본가 링크 제공
+      this.playerCountLabel
+        .setText("원본 버전 게임으로 이동")
+        .setInteractive()
+        .on('pointerover', function () { this.setStyle({ color:"blue" }); }, this.playerCountLabel)
+        .on('pointerout', function () { this.setStyle({ color:"white" }); }, this.playerCountLabel)
+        .on('pointerdown', function () {
+          top.location.href = "https://pokerogue.net";
+        });
       // this.dailyRunScoreboard.update();
 
       // this.updateTitleStats();
