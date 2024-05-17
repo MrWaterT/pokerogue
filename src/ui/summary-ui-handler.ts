@@ -21,6 +21,7 @@ import { PlayerGender } from "../system/game-data";
 import { Variant, getVariantTint } from "#app/data/variant";
 import {Button} from "../enums/buttons";
 import { Ability } from "../data/ability.js";
+import i18next from "i18next";
 
 enum Page {
   PROFILE,
