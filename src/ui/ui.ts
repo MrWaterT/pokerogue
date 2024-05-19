@@ -254,6 +254,7 @@ export default class UI extends Phaser.GameObjects.Container {
     this.tooltipContent.setText(wrappedContent);
     this.tooltipContent.y = title ? 16 : 4;
     this.tooltipBg.width = Math.min(Math.max(this.tooltipTitle.displayWidth, this.tooltipContent.displayWidth) + 12, 684);
+    this.tooltipTitle.x = this.tooltipBg.width/2;
     this.tooltipBg.height = (title ? 31 : 19) + 10.5 * (wrappedContent.split('\n').length - 1);
     if (overlap)
        (this.scene as BattleScene).uiContainer.moveAbove(this.tooltipContainer, this);

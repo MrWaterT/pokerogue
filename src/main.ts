@@ -9,6 +9,11 @@ import BBCodeText from 'phaser3-rex-plugins/plugins/bbcodetext';
 import TransitionImagePackPlugin from 'phaser3-rex-plugins/templates/transitionimagepack/transitionimagepack-plugin.js';
 import { LoadingScene } from './loading-scene';
 
+// 기본 언어 강제설정
+if (!localStorage.getItem('prLang')) {
+	console.log("첫 접속 감지: 한국어로 언어 설정");
+	localStorage.setItem('prLang', 'ko');
+}
 
 // Catch global errors and display them in an alert so users can report the issue.
 window.onerror = function (message, source, lineno, colno, error) {
