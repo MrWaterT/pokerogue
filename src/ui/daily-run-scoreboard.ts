@@ -112,19 +112,20 @@ export class DailyRunScoreboard extends Phaser.GameObjects.Container {
     this.nextPageButton.setVisible(false);
 
     this.titleLabel
-      .setText("최신화 당일 시드로 접속하기")
+      .setText("최신화 당일의 원본 버전 시드로 접속하기")
+      .setFontSize("50px")
       .setInteractive()
       .on('pointerover', function () { this.setStyle({ color:"blue" }); }, this.titleLabel)
       .on('pointerout', function () { this.setStyle({ color:"white" }); }, this.titleLabel)
       .on('pointerdown', function () {
         top.location.href = "https://pokerogue.watert.stream?seed=" +
-          "dAogdlTZTw6WnA7ZHRbXhw==";
+          "F4cnH/ugeELnzqQn8gKCuA==";
       });
     this.loadingLabel
       .setText(
-        "24.05.17 11:29 기준 최신화 완료\n(PR#737: 로캘파일 100% 한국어화)\n(트레이너 이름, 날씨 텍스트 등)\n\n" +
-        "데일리런은\npokerogue.watert.stream?seed=시드\n로 접속해서 실행해주세요.\n\n" +
-        "시드는 pokerogue.net에서\n개발자도구를 켜서 직접 구하셔야 합니다\n(데일리런 시작 후 seed 요청 Response)"
+        "24.05.19 15:43 기준 최신화 완료\n(PR#737: 로캘파일 100% 한국어화)\n\n포켓몬 상태 번역(PR#918) 적용완료\n\n\n" +
+        "쿼리(주소창에 ?seed=[시드])가 없으면\n원본 버전과 다른 데일리런이 나옵니다.\n\n" +
+        "같은 시드로 플레이하려면 개발자도구로\n시드를 직접 구하셔야 합니다.\n(데일리런 시작 후 seed 요청 Response)"
       )
       .setFontSize("48px")
       .setVisible(true);

@@ -345,8 +345,8 @@ export class TitlePhase extends Phase {
           console.error("Failed to load daily run:\n", err);
         });
       } else  {
-        let seed = new URL(window.location.toString()).searchParams.get("seed").replace(/ /g,"+") as string;
-        if (seed && seed.length>0) { generateDaily(seed); }
+        let seed = new URL(window.location.toString()).searchParams.get("seed") as String;;
+        if (seed && seed.length>0) { generateDaily(seed.replace(/ /g,"+")); }
         else { generateDaily(btoa(new Date().toISOString().substring(0, 10))); }
       }
     });
