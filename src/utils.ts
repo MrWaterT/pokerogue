@@ -359,6 +359,7 @@ export function verifyLang(lang?: string): boolean {
     case 'it':
     case 'zh_CN':
     case 'pt_BR':
+    case 'ko':
       return true;
     default:
       return false;
