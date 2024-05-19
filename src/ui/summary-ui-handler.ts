@@ -682,7 +682,7 @@ export default class SummaryUiHandler extends UiHandler {
         const profileContainer = this.scene.add.container(0, -pageBg.height);
         pageContainer.add(profileContainer);
 
-        const trainerText = i18next.t('summaryUiHandler:originalTrainer') as string
+        const trainerText = getBBCodeFrag(i18next.t('summaryUiHandler:originalTrainer'), TextStyle.SUMMARY_ALT, this.scene.uiTheme)
           + "/ " + getBBCodeFrag(
             loggedInUser?.username || i18next.t('summaryUiHandler:unknown'),
             this.scene.gameData.gender === PlayerGender.Female? TextStyle.SUMMARY_PINK: TextStyle.SUMMARY_BLUE
