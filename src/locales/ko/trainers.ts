@@ -215,7 +215,6 @@ export const trainerNames: SimpleTranslationEntries = {
     "kahili": "카일리",
     "rika": "칠리",
     "poppy": "뽀삐",
-    "larry_elite": "청목", // Does this really need to be an extra entry? (it is in trainer-type.ts so I added it here)
     "hassel": "팔자크",
     "crispin": "하솔",
     "amarys": "네리네",
@@ -223,7 +222,6 @@ export const trainerNames: SimpleTranslationEntries = {
     "drayton": "제빈",
     "blue": "그린",
     "red": "레드",
-    "lance_champion": "목호", // Does this really need to be an extra entry? (it is in trainer-type.ts so I added it here)
     "steven": "성호",
     "wallace": "윤진",
     "cynthia": "난천",
