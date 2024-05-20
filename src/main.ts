@@ -13,6 +13,7 @@ import { LoadingScene } from './loading-scene';
 if (!localStorage.getItem('prLang')) {
 	console.log("첫 접속 감지: 한국어로 언어 설정");
 	localStorage.setItem('prLang', 'ko');
+	top.location.reload();
 }
 
 // Catch global errors and display them in an alert so users can report the issue.
