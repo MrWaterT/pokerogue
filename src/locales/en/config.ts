@@ -1,6 +1,9 @@
 import { ability } from "./ability";
 import { abilityTriggers } from "./ability-trigger";
+import { achv } from "./achv";
 import { battle } from "./battle";
+import { battleMessageUiHandler } from "./battle-message-ui-handler";
+import { berry } from "./berry";
 import { biome } from "./biome";
 import { commandUiHandler } from "./command-ui-handler";
 import { egg } from "./egg";
@@ -20,15 +23,17 @@ import { starterSelectUiHandler } from "./starter-select-ui-handler";
 import { SummaryUiHandler } from "./summary-ui-handler";
 import { titles, trainerClasses, trainerNames } from "./trainers";
 import { tutorial } from "./tutorial";
-import { weather } from "./weather";
-import { battleMessageUiHandler } from "./battle-message-ui-handler";
-import { berry } from "./berry";
 import { voucher } from "./voucher";
+import { weather } from "./weather";
 
-export const enConfig = {    
+export const enConfig = {
     ability: ability,
     abilityTriggers: abilityTriggers,
+    achv: achv,
     battle: battle,
+    battleMessageUiHandler: battleMessageUiHandler,
+    berry: berry,
+    biome: biome,
     commandUiHandler: commandUiHandler,
     egg: egg,
     fightUiHandler: fightUiHandler,
@@ -38,20 +43,17 @@ export const enConfig = {
     modifierType: modifierType,
     move: move,
     nature: nature,
+    partyUiHandler: partyUiHandler,
     pokeball: pokeball,
     pokemon: pokemon,
     pokemonInfo: pokemonInfo,
     splashMessages: splashMessages,
     starterSelectUiHandler: starterSelectUiHandler,
+    summaryUiHandler: SummaryUiHandler,
     titles: titles,
     trainerClasses: trainerClasses,
     trainerNames: trainerNames,
     tutorial: tutorial,
-    partyUiHandler: partyUiHandler,
-    summaryUiHandler: SummaryUiHandler,
-    biome: biome,
-    weather: weather,
-    battleMessageUiHandler: battleMessageUiHandler,
-    berry: berry,
     voucher: voucher,
+    weather: weather,
 }
