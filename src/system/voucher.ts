@@ -1,7 +1,7 @@
 import BattleScene from "../battle-scene";
 import { TrainerType } from "../data/enums/trainer-type";
 import { ModifierTier } from "../modifier/modifier-tier";
-import { Achv, AchvTier, achvs } from "./achv";
+import { Achv, AchvTier, achvs, getAchievementDescription } from "./achv";
 import i18next from '../plugins/i18n';
 
 export enum VoucherType {
@@ -97,7 +97,7 @@ const voucherAchvs: Achv[] = [ achvs.CLASSIC_VICTORY ];
             : achv.score >= 75
               ? VoucherType.PLUS
               : VoucherType.REGULAR;
-        vouchers[achv.id] = new Voucher(voucherType, achv.description);
+        vouchers[achv.id] = new Voucher(voucherType, getAchievementDescription(achv.localizationKey));
       }
 
       const bossTrainerTypes = Object.keys(trainerConfigs)
