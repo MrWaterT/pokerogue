@@ -22,6 +22,7 @@ import { starterSelectUiHandler } from "./starter-select-ui-handler";
 import { summaryUiHandler } from "./summary-ui-handler";
 import { titles, trainerClasses, trainerNames } from "./trainers";
 import { tutorial } from "./tutorial";
+import { voucher } from "./voucher";
 import { weather } from "./weather";
 
 
@@ -52,5 +53,6 @@ export const koConfig = {
   trainerClasses,
   trainerNames,
   tutorial,
+  voucher,
   weather,
 }
