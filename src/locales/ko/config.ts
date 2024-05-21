@@ -1,5 +1,6 @@
 import { ability } from "./ability";
 import { abilityTriggers } from "./ability-trigger";
+import { achv } from "./achv";
 import { battle } from "./battle";
 import { battleMessageUiHandler } from "./battle-message-ui-handler";
 import { berry } from "./berry";
@@ -26,6 +27,7 @@ import { weather } from "./weather";
 export const koConfig = {
   ability,
   abilityTriggers,
+  achv,
   battle,
   battleMessageUiHandler,
   berry,
